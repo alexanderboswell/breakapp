@@ -12,31 +12,24 @@ struct ContentView: View {
 	
 	@State var showingSettings = false
 	
-    var settingsButton: some View {
-        Button(action: { self.showingSettings.toggle() }) {
-            Image(systemName: "person.crop.circle")
-                .imageScale(.large)
-                .accessibility(label: Text("User Profile"))
-                .padding()
-        }
-    }
+	var settingsButton: some View {
+		Button(action: { self.showingSettings.toggle() }, label: { Text("Settings") })
+	}
 	
-    var body: some View {
+	var body: some View {
 		NavigationView {
-			List {
-				Text("Hello, World!")
+			Text("Hello world")
+			.navigationBarTitle(Text("Featured"))
+			.navigationBarItems(trailing: settingsButton)
+			.sheet(isPresented: $showingSettings) {
+				SettingsView().environmentObject(Settings())
 			}
 		}
-		.navigationBarTitle(Text("Featured"))
-		.navigationBarItems(trailing: settingsButton)
-		.sheet(isPresented: $showingSettings) {
-			Text("Hello worls")
-		}
-    }
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }

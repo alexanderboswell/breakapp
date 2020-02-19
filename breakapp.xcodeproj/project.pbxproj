@@ -30,6 +30,7 @@
 		F3FD3CFF23FA1F26000E13E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3CFE23FA1F26000E13E1 /* SettingsView.swift */; };
 		F3FD3D0223FA2054000E13E1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3D0123FA2054000E13E1 /* Settings.swift */; };
 		F3FD3D0423FA222A000E13E1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3D0323FA222A000E13E1 /* UserData.swift */; };
+		F3FD3D0623FCF280000E13E1 /* SettingsWeekdayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3D0523FCF280000E13E1 /* SettingsWeekdayRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		F3FD3CFE23FA1F26000E13E1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F3FD3D0123FA2054000E13E1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F3FD3D0323FA222A000E13E1 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		F3FD3D0523FCF280000E13E1 /* SettingsWeekdayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWeekdayRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			children = (
 				F3FD3CFE23FA1F26000E13E1 /* SettingsView.swift */,
 				F3FD3CA023FA1C12000E13E1 /* ContentView.swift */,
+				F3FD3D0523FCF280000E13E1 /* SettingsWeekdayRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			files = (
 				F3FD3D0423FA222A000E13E1 /* UserData.swift in Sources */,
 				F3FD3C9D23FA1C12000E13E1 /* AppDelegate.swift in Sources */,
+				F3FD3D0623FCF280000E13E1 /* SettingsWeekdayRow.swift in Sources */,
 				F3FD3CFF23FA1F26000E13E1 /* SettingsView.swift in Sources */,
 				F3FD3C9F23FA1C12000E13E1 /* SceneDelegate.swift in Sources */,
 				F3FD3CA123FA1C12000E13E1 /* ContentView.swift in Sources */,
