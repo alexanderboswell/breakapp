@@ -43,7 +43,7 @@ struct SettingsView: View {
 							self.editing = true
 						}, label: { Text("Edit") }))
 			).sheet(isPresented: $showModal) {
-				WeekdayEditView()
+				WeekdayEditView(weekday: self.selectedWeekday)
 			}
 				.navigationBarTitle("Settings")
 		}

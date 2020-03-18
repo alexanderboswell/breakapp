@@ -15,7 +15,7 @@ struct SettingsWeekdayRow: View {
 	
     var body: some View {
 		HStack {
-			Text("Monday")
+			Text(self.weekday.label)
 			Spacer()
 			Text("8 am - 5 pm")
 			Spacer()
