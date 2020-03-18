@@ -17,14 +17,23 @@ struct ContentView: View {
 	}
 	
 	var body: some View {
-		NavigationView {
-			Text("Hello world")
-			.navigationBarTitle(Text("Featured"))
-			.navigationBarItems(trailing: settingsButton)
-			.sheet(isPresented: $showingSettings) {
-				SettingsView().environmentObject(Settings())
+		TabView {
+			HomeView().tabItem {
+				Image(systemName: "house.fill")
+				Text("Home")
+			}
+			SettingsView().environmentObject(UserData()).tabItem {
+				Image(systemName: "gear")
+					 Text("Settings")
 			}
 		}
+//		NavigationView {
+//			Text("Hello world")
+//			.navigationBarItems(trailing: settingsButton)
+//			.sheet(isPresented: $showingSettings) {
+//				SettingsView().environmentObject(UserData())
+//			}
+//		}
 	}
 }
 

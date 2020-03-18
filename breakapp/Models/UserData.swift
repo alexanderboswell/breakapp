@@ -11,5 +11,5 @@ import Combine
 import SwiftUI
 
 final class UserData: ObservableObject {
-	@Published var settings = Settings()
+	@Published var settings = Settings.default
 }

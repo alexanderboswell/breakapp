@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F39BC77724173B68004D3DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39BC77624173B68004D3DB6 /* HomeView.swift */; };
+		F39BC77924174F73004D3DB6 /* WeekdayEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39BC77824174F73004D3DB6 /* WeekdayEditView.swift */; };
+		F3E2EBBB2406285B00D6E22B /* breakapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3E2EBB92406285B00D6E22B /* breakapp.xcdatamodeld */; };
 		F3FD3C9D23FA1C12000E13E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3C9C23FA1C12000E13E1 /* AppDelegate.swift */; };
 		F3FD3C9F23FA1C12000E13E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3C9E23FA1C12000E13E1 /* SceneDelegate.swift */; };
 		F3FD3CA123FA1C12000E13E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3CA023FA1C12000E13E1 /* ContentView.swift */; };
@@ -90,6 +93,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F39BC77624173B68004D3DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F39BC77824174F73004D3DB6 /* WeekdayEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayEditView.swift; sourceTree = "<group>"; };
+		F3E2EBBA2406285B00D6E22B /* breakapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = breakapp.xcdatamodel; sourceTree = "<group>"; };
 		F3FD3C9923FA1C12000E13E1 /* breakapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FD3C9C23FA1C12000E13E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3FD3C9E23FA1C12000E13E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				F3FD3CA723FA1C13000E13E1 /* LaunchScreen.storyboard */,
 				F3FD3CAA23FA1C13000E13E1 /* Info.plist */,
 				F3FD3CA423FA1C13000E13E1 /* Preview Content */,
+				F3E2EBB92406285B00D6E22B /* breakapp.xcdatamodeld */,
 			);
 			path = breakapp;
 			sourceTree = "<group>";
@@ -263,6 +270,8 @@
 				F3FD3CFE23FA1F26000E13E1 /* SettingsView.swift */,
 				F3FD3CA023FA1C12000E13E1 /* ContentView.swift */,
 				F3FD3D0523FCF280000E13E1 /* SettingsWeekdayRow.swift */,
+				F39BC77624173B68004D3DB6 /* HomeView.swift */,
+				F39BC77824174F73004D3DB6 /* WeekdayEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +303,8 @@
 				F3FD3CC623FA1C14000E13E1 /* PBXTargetDependency */,
 			);
 			name = breakapp;
+			packageProductDependencies = (
+			);
 			productName = breakapp;
 			productReference = F3FD3C9923FA1C12000E13E1 /* breakapp.app */;
 			productType = "com.apple.product-type.application";
@@ -406,6 +417,8 @@
 				Base,
 			);
 			mainGroup = F3FD3C9023FA1C12000E13E1;
+			packageReferences = (
+			);
 			productRefGroup = F3FD3C9A23FA1C12000E13E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -472,6 +485,9 @@
 				F3FD3D0423FA222A000E13E1 /* UserData.swift in Sources */,
 				F3FD3C9D23FA1C12000E13E1 /* AppDelegate.swift in Sources */,
 				F3FD3D0623FCF280000E13E1 /* SettingsWeekdayRow.swift in Sources */,
+				F39BC77724173B68004D3DB6 /* HomeView.swift in Sources */,
+				F3E2EBBB2406285B00D6E22B /* breakapp.xcdatamodeld in Sources */,
+				F39BC77924174F73004D3DB6 /* WeekdayEditView.swift in Sources */,
 				F3FD3CFF23FA1F26000E13E1 /* SettingsView.swift in Sources */,
 				F3FD3C9F23FA1C12000E13E1 /* SceneDelegate.swift in Sources */,
 				F3FD3CA123FA1C12000E13E1 /* ContentView.swift in Sources */,
@@ -935,6 +951,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3E2EBB92406285B00D6E22B /* breakapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3E2EBBA2406285B00D6E22B /* breakapp.xcdatamodel */,
+			);
+			currentVersion = F3E2EBBA2406285B00D6E22B /* breakapp.xcdatamodel */;
+			path = breakapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F3FD3C9123FA1C12000E13E1 /* Project object */;
 }

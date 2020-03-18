@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct SettingsView: View {
-	@EnvironmentObject var settings: Settings
+	@EnvironmentObject var userData: UserData
 	
 	@State var editing = false
+	@State var selectedWeekday: Weekday = UserData().settings.weekdays.first!
+	@State private var showModal: Bool = false
 	
 	var body: some View {
 		NavigationView {
@@ -21,21 +23,17 @@ struct SettingsView: View {
 					Text("hello world")
 				}
 				Section {
-					SettingsWeekdayRow()
-					SettingsWeekdayRow()
-					SettingsWeekdayRow()
+					ForEach(self.userData.settings.weekdays, id: \.self) { weekday in
+						Button(action: {
+							self.showModal.toggle()
+							self.selectedWeekday = weekday
+						}, label: {
+						SettingsWeekdayRow(weekday: weekday, isEditing: self.editing)
+						}).foregroundColor(.primary)
+					}
 				}
 			}.listStyle(GroupedListStyle())
 				.navigationBarItems(
-					leading: self.editing ?
-						AnyView(Button(action: {
-							// Actions
-							self.editing = false
-						}, label: { Text("Cancel") }))
-						:
-						AnyView(EmptyView()),
-					
-					
 					trailing: self.editing ?
 						AnyView(Button(action: {
 							self.editing = false
@@ -44,7 +42,9 @@ struct SettingsView: View {
 						AnyView(Button(action: {
 							self.editing = true
 						}, label: { Text("Edit") }))
-			)
+			).sheet(isPresented: $showModal) {
+				WeekdayEditView()
+			}
 				.navigationBarTitle("Settings")
 		}
 	}
@@ -52,6 +52,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView().environmentObject(Settings())
+		SettingsView().environmentObject(UserData())
 	}
 }
