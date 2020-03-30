@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Settings" representedClassName="Settings" syncable="YES" codeGenerationType="class">
-        <relationship name="weekdays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weekday" inverseName="settings" inverseEntity="Weekday"/>
-    </entity>
-    <entity name="Weekday" representedClassName="Weekday" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="Weekday" representedClassName="Weekday" syncable="YES">
         <attribute name="enabled" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="endTime" optional="YES" attributeType="Date" defaultDateTimeInterval="607132800" usesScalarValueType="NO"/>
         <attribute name="label" optional="YES" attributeType="String"/>
         <attribute name="startTime" optional="YES" attributeType="Date" defaultDateTimeInterval="607100400" usesScalarValueType="NO"/>
-        <relationship name="settings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Settings" inverseName="weekdays" inverseEntity="Settings"/>
     </entity>
     <elements>
-        <element name="Weekday" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="Settings" positionX="-54" positionY="18" width="128" height="58"/>
+        <element name="Weekday" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>

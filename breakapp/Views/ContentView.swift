@@ -7,26 +7,28 @@
 //
 
 import SwiftUI
-
-struct ContentView: View {
-	
-	@State var showingSettings = false
-	
-	var settingsButton: some View {
-		Button(action: { self.showingSettings.toggle() }, label: { Text("Settings") })
-	}
-	
-	var body: some View {
-		TabView {
-			HomeView().tabItem {
-				Image(systemName: "house.fill")
-				Text("Home")
-			}
-			SettingsView().environmentObject(UserData()).tabItem {
-				Image(systemName: "gear")
-					 Text("Settings")
-			}
-		}
+//
+//struct ContentView: View {
+//	@Environment(\.managedObjectContext) var moc
+//	@FetchRequest(entity: Settings.entity(), sortDescriptors: []) var settings <
+//	
+//	@State var showingSettings = false
+//	
+//	var settingsButton: some View {
+//		Button(action: { self.showingSettings.toggle() }, label: { Text("Settings") })
+//	}
+//	
+//	var body: some View {
+//		TabView {
+//			HomeView().tabItem {
+//				Image(systemName: "house.fill")
+//				Text("Home")
+//			}
+//			SettingsView().environmentObject(UserData()).tabItem {
+//				Image(systemName: "gear")
+//					 Text("Settings")
+//			}
+//		}
 //		NavigationView {
 //			Text("Hello world")
 //			.navigationBarItems(trailing: settingsButton)
@@ -34,11 +36,11 @@ struct ContentView: View {
 //				SettingsView().environmentObject(UserData())
 //			}
 //		}
-	}
-}
-
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
-}
+//	}
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		ContentView()
+//	}
+//}

@@ -12,10 +12,13 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		if isDataSet() == false {
+			setDefaultData()
+		}
+		
 		return true
 	}
 
@@ -59,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	            fatalError("Unresolved error \(error), \(error.userInfo)")
 	        }
 	    })
+		
 	    return container
 	}()
 
@@ -77,6 +81,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	        }
 	    }
 	}
+	
+	func setDefaultData() {
+		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+		
+		let managedContext = appDelegate.persistentContainer.viewContext
+		
+		for weekday in Constants.CoreData.weekdays {
+			let user = NSManagedObject(entity: Weekday.entity(), insertInto: managedContext)
+			user.setValue("\(weekday)", forKey: Constants.CoreData.Attributes.label)
+		}
 
+		try? managedContext.save()
+	}
+
+	func isDataSet() -> Bool {
+		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return true }
+				
+		let managedContext = appDelegate.persistentContainer.viewContext
+		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreData.Entities.weekday)
+				
+		let result = try? managedContext.fetch(fetchRequest)
+		return result?.count != 0
+	}
 }
-
