@@ -68,6 +68,7 @@ struct Constants {
 		static let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 		
 		struct Attributes {
+			static let sortNumber = "sortNumber"
 			static let label = "label"
 			static let enabled = "enabled"
 			static let endTime = "endTime"

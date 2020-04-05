@@ -21,6 +21,7 @@ extension Weekday {
     @NSManaged public var endTime: Date?
     @NSManaged public var label: String?
     @NSManaged public var startTime: Date?
+	@NSManaged public var sortNumber: Int
 	
 	public var wrappedEndTime: Date {
 		var components = DateComponents()
@@ -39,7 +40,7 @@ extension Weekday {
 		components.hour = 17
 		components.minute = 0
 		let date = Calendar.current.date(from: components) ?? Date()
-		return endTime ?? date
+		return startTime ?? date
 	}
 
 }

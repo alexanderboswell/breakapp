@@ -87,9 +87,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		let managedContext = appDelegate.persistentContainer.viewContext
 		
-		for weekday in Constants.CoreData.weekdays {
+		for (i, weekday) in Constants.CoreData.weekdays.enumerated() {
 			let user = NSManagedObject(entity: Weekday.entity(), insertInto: managedContext)
 			user.setValue("\(weekday)", forKey: Constants.CoreData.Attributes.label)
+			user.setValue(i, forKey: Constants.CoreData.Attributes.sortNumber)
 		}
 
 		try? managedContext.save()

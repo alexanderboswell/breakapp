@@ -10,10 +10,10 @@ import SwiftUI
 
 struct SettingsView: View {
 	@Environment(\.managedObjectContext) var moc
-	@FetchRequest(entity: Weekday.entity(), sortDescriptors: []) var weekdays: FetchedResults<Weekday>
+	@FetchRequest(entity: Weekday.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Weekday.sortNumber, ascending: true)]) var weekdays: FetchedResults<Weekday>
 	
 	@State var editing = false
-//	@State var selectedWeekday: Weekday = UserData().settings.weekdays.first!
+	@State var selectedWeekday: Weekday?
 	@State private var showModal: Bool = false
 	
 	var body: some View {
@@ -27,12 +27,11 @@ struct SettingsView: View {
 					ForEach(weekdays, id: \.self) { weekday in
 						Button(action: {
 							self.showModal.toggle()
-//							self.selectedWeekday = weekday
+							self.selectedWeekday = weekday
 						}, label: {
-							Text("\(weekday.wrappedLabel)")
-//						SettingsWeekdayRow(weekday: weekday, isEditing: self.editing)
-//						}).foregroundColor(.primary)
-					})
+							SettingsWeekdayRow(weekday: weekday, isEditing: self.editing)
+							}).foregroundColor(.primary)
+					}
 				}
 			}.listStyle(GroupedListStyle())
 				.navigationBarItems(
@@ -46,15 +45,15 @@ struct SettingsView: View {
 						}, label: { Text("Edit") }))
 			)
 //					.sheet(isPresented: $showModal) {
-//				WeekdayEditView(weekday: self.selectedWeekday)
-			}
+//						WeekdayEditView(weekday: self.selectedWeekday!)
+//			}
 				.navigationBarTitle("Settings")
 		}
 	}
 }
 
-struct SettingsView_Previews: PreviewProvider {
-	static var previews: some View {
-		SettingsView()
-	}
-}
+//struct SettingsView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		SettingsView()
+//	}
+//}

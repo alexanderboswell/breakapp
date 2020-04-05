@@ -13,6 +13,7 @@
 		F3D61D5D243064CF006DE0CC /* Weekday+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D61D59243064CF006DE0CC /* Weekday+CoreDataProperties.swift */; };
 		F3D61D5F2431A114006DE0CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D61D5E2431A114006DE0CC /* Extensions.swift */; };
 		F3E2EBBB2406285B00D6E22B /* breakapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3E2EBB92406285B00D6E22B /* breakapp.xcdatamodeld */; };
+		F3FC7E3524398A1E000E4CD7 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC7E3424398A1E000E4CD7 /* TimerView.swift */; };
 		F3FD3C9D23FA1C12000E13E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3C9C23FA1C12000E13E1 /* AppDelegate.swift */; };
 		F3FD3C9F23FA1C12000E13E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3C9E23FA1C12000E13E1 /* SceneDelegate.swift */; };
 		F3FD3CA123FA1C12000E13E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD3CA023FA1C12000E13E1 /* ContentView.swift */; };
@@ -100,6 +101,7 @@
 		F3D61D59243064CF006DE0CC /* Weekday+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weekday+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F3D61D5E2431A114006DE0CC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F3E2EBBA2406285B00D6E22B /* breakapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = breakapp.xcdatamodel; sourceTree = "<group>"; };
+		F3FC7E3424398A1E000E4CD7 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		F3FD3C9923FA1C12000E13E1 /* breakapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FD3C9C23FA1C12000E13E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3FD3C9E23FA1C12000E13E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				F3FD3D0523FCF280000E13E1 /* SettingsWeekdayRow.swift */,
 				F39BC77624173B68004D3DB6 /* HomeView.swift */,
 				F39BC77824174F73004D3DB6 /* WeekdayEditView.swift */,
+				F3FC7E3424398A1E000E4CD7 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				F3E2EBBB2406285B00D6E22B /* breakapp.xcdatamodeld in Sources */,
 				F39BC77924174F73004D3DB6 /* WeekdayEditView.swift in Sources */,
 				F3FD3CFF23FA1F26000E13E1 /* SettingsView.swift in Sources */,
+				F3FC7E3524398A1E000E4CD7 /* TimerView.swift in Sources */,
 				F3D61D5C243064CF006DE0CC /* Weekday+CoreDataClass.swift in Sources */,
 				F3D61D5D243064CF006DE0CC /* Weekday+CoreDataProperties.swift in Sources */,
 				F3FD3C9F23FA1C12000E13E1 /* SceneDelegate.swift in Sources */,
