@@ -19,7 +19,7 @@ struct ContentView: View {
 			}
 			SettingsView().tabItem {
 				Image(systemName: "gear")
-					 Text("Settings")
+				Text("Settings")
 			}
 		}
 	}

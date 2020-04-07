@@ -13,7 +13,7 @@ struct TimerView: View {
     var body: some View {
         ZStack {
 			Circle()
-				.trim(from: progress > 0.99 ? 0.0 : 0.025 , to: progress > 0.99 ? progress : progress - 0.025)
+				.trim(from: progress > 0.99999 ? 0.0 : 0.025 , to: progress > 0.99999 ? progress : progress - 0.025)
 				  .stroke(
 					  AngularGradient(
 						gradient: Gradient(colors: [Color.black]),
@@ -23,12 +23,14 @@ struct TimerView: View {
 					  ),
 					  style: StrokeStyle(lineWidth: 25, lineCap: .round)
 			  ).rotationEffect(.degrees(-90))
-				.shadow(color: Color.black.opacity(0.5), radius: 3, x: 4, y: 0)
-				.frame(width: 315, height: 315, alignment: .center)
+				.shadow(color: Color.black.opacity(0.75), radius: 5, x: 0, y: 0)
+				.frame(minWidth: 240, idealWidth: 240, maxWidth: 315, minHeight: 240, idealHeight: 240, maxHeight: 315,alignment: .center)
+//				.frame(width: 315, height: 315, alignment: .center)
 			.aspectRatio(contentMode: .fit)
 
 			Image("timerBackground")
-			.frame(width: 340, height: 340, alignment: .center)
+			.resizable()
+				.frame(minWidth: 240, idealWidth: 265, maxWidth: 340, minHeight: 240, idealHeight: 265, maxHeight: 340,alignment: .center)
 			.clipShape(Circle())
 
 		Circle()
@@ -43,36 +45,26 @@ struct TimerView: View {
 					startAngle: .degrees(0),
 					endAngle: .degrees(0)
 				),
-				style: StrokeStyle(lineWidth: 26, lineCap: .square)
+				style: StrokeStyle(lineWidth: 28, lineCap: .square)
 			).rotationEffect(.degrees(-90))
-			.frame(width: 315, height: 315, alignment: .center)
-
-		
-			Text("Test").font(.headline)
+				.frame(minWidth: 240, idealWidth: 240, maxWidth: 315, minHeight: 240, idealHeight: 240, maxHeight: 315,alignment: .center)
+			
+			Text("32").font(.system(size: 108))
+			HStack {
+				Spacer()
+				Spacer()
+				Spacer()
+				Spacer()
+				Text("mins").font(.title)
+				Spacer()
+				
+			}
 		}
-    }
+	}
 }
 
 struct TimerView_Previews: PreviewProvider {
 	static var previews: some View {
-		TimerView(progress: .constant((1)))
+		TimerView(progress: .constant((0.6)))
 	}
-}
-
-extension Color {
-    public static var outlineRed: Color {
-        return Color(decimalRed: 34, green: 0, blue: 3)
-    }
-    
-    public static var darkRed: Color {
-        return Color(decimalRed: 221, green: 31, blue: 59)
-    }
-    
-    public static var lightRed: Color {
-        return Color(decimalRed: 239, green: 54, blue: 128)
-    }
-    
-    public init(decimalRed red: Double, green: Double, blue: Double) {
-        self.init(red: red / 255, green: green / 255, blue: blue / 255)
-    }
 }

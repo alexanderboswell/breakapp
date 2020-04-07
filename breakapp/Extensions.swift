@@ -7,6 +7,21 @@
 //
 
 import Foundation
+import SwiftUI
+
+extension Color {
+	public static var megaMan: Color {
+		return Color(decimalRed: 64, green: 196, blue: 248)
+	}
+
+	public static var spiroDiscoBall: Color {
+		return Color(decimalRed: 26, green: 174, blue: 247)
+	}
+
+	public init(decimalRed red: Double, green: Double, blue: Double) {
+		self.init(red: red / 255, green: green / 255, blue: blue / 255)
+	}
+}
 
 extension UserDefaults {
 	
@@ -61,7 +76,6 @@ extension UserDefaults {
 		}
 	}
 }
-
 
 struct Constants {
 	struct CoreData {
